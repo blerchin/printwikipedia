@@ -1,0 +1,25 @@
+<div class="book"
+	data-book-name="<%= c.name %>"
+>
+	<a href="<%= g.c.LULU_URL(c.sku) %>" target="_blank">
+		<div class="book-thumb">
+			<% if(g.c.PRELOAD_THUMBS){
+			%>
+				<img 	class="lazy book thumb preload" 
+							src="<%= g.c.LOADER_PATH %>/"
+							data-original="<%= g.c.IMG_DIR %>/<%=c.thumb %>" />
+			<%
+				} else {
+			%>
+				<img class="book thumb" src="<%= g.c.IMG_DIR %>/<%=c.thumb%>" />
+			<%
+				}
+			%>
+		</div>
+		<div class="book-data">
+				<h4 class="book-name">
+					<%= c.name %>
+				</h4>
+		</div>
+	</a>
+</div>
