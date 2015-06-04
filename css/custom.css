@@ -25,6 +25,9 @@ article:first-child {
 	width: 100%;
 	height: auto;
 }
+#mobile-title {
+	padding-left: 0px;
+}
 nav.navbar {
 	color: #000;
 	background-color: #fff;
@@ -34,16 +37,29 @@ nav.navbar {
 nav.navbar a.navbar-brand {
 	color: #000;
 }
-nav.navbar .navbar-nav .active>a {
+@media screen and (min-width: 481px) {
+	ul.nav.navbar-nav li:first-child a {
+		padding-left: 0px;
+	}
+}
+nav.navbar .navbar-nav>.active>a,
+nav.navbar .navbar-nav .active>a:focus,
+nav.navbar .navbar-nav .active>a:hover
+{
 	background-color: #fff;
+	color: #333;
+}
+
+#list-region {
+	margin-left: 15px;
 }
 
 .book {
 	float: left;
-	width: 272px;
-	height: 395px;
+	width: 252px;
+	height: 385px;
 	overflow: hidden;
-	margin: 0 10px 10px 0;
+	margin: 0 20px 20px 0;
 	background-color: white;
 }
 .book img{

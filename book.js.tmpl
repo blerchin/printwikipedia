@@ -1,5 +1,7 @@
 <div class="book"
 	data-book-name="<%= c.name %>"
+	style="	width: <%= g.c.ITEM_WIDTH %>px; 
+					height: <%= g.c.ITEM_WIDTH * 1.45%>px"
 >
 	<a href="<%= g.c.LULU_URL(c.sku) %>" target="_blank">
 		<div class="book-thumb">
@@ -11,7 +13,7 @@
 			<%
 				} else {
 			%>
-				<img class="book thumb" src="<%= g.c.IMG_DIR %>/<%=c.thumb%>" />
+				<img class="thumb" src="<%= g.c.IMG_DIR %>/<%=c.thumb%>" />
 			<%
 				}
 			%>

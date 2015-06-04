@@ -28,6 +28,8 @@
 				<div class="col-sm-12">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
+						<div id="mobile-title" class="navbar-brand visible-xs">
+						Print Wikipedia</div>
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
@@ -72,7 +74,7 @@
 			g.c = {
 				LOADER_PATH: "img/spinner.gif",
 				IMG_DIR: "img/thumbs",
-				ITEM_WIDTH: 272,
+				ITEM_WIDTH: 180,
 				PRELOAD_THUMBS: false,
 				LULU_URL: function(token){
 					return "http://www.lulu.com/shop/product-" + token + ".html";
