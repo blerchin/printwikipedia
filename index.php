@@ -23,33 +23,32 @@
     <![endif]-->
   </head>
   <body>
-		<div class="nav-bg"></div>
-		<div class="pw-container">
-			<nav class="navbar navbar-default navbar-fixed-top">
-					<div class="col-sm-12">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<div id="mobile-title" class="navbar-brand visible-xs">
-							Print Wikipedia</div>
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="pw-width navbar-text">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<div id="mobile-title" class="navbar-brand visible-xs">
+					Print Wikipedia</div>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
 
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li><a href="#/">Print Wikipedia</a></li>
-								<li><a href="#/table-of-contents">Wikipedia Table of Contents</a></li>
-								<li><a href="#/contributor-appendix">Wikipedia Contributor Appendix</a></li>
-								<li><a href="#/about">About</a></li>
-							</ul>
-						</div><!-- /.navbar-collapse -->
-					</div><!-- /.col-sm-12 -->
-			</nav>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#/">Print Wikipedia</a></li>
+						<li><a href="#/table-of-contents">Wikipedia Table of Contents</a></li>
+						<li><a href="#/contributor-appendix">Wikipedia Contributor Appendix</a></li>
+						<li><a href="#/about">About</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.pw-width -->
+		</nav>
+		<div class="pw-container pw-width">
 			<div id="view" >
 			</div>
 		</div> <!-- /.container -->

@@ -5,8 +5,8 @@ $(function(){
 
 	var onResize = function(){
 		var scrollWidth = $(window).width();
-		scrollWidth = scrollWidth - (scrollWidth % (g.c.ITEM_WIDTH + g.c.ITEM_MARGIN));
-		$('.pw-container').width(scrollWidth);
+		scrollWidth = scrollWidth - (scrollWidth % (g.c.ITEM_WIDTH + g.c.ITEM_MARGIN)) - g.c.ITEM_MARGIN;
+		$('.pw-width').width(scrollWidth);
 	};
 
 	resizeScheduled = false;
