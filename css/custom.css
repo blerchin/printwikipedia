@@ -37,7 +37,7 @@ nav.navbar {
 nav.navbar a.navbar-brand {
 	color: #000;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
 	ul.nav.navbar-nav li:first-child a {
 		padding-left: 0px;
 	}
