@@ -1,7 +1,27 @@
+@font-face {
+	font-family: "LinLibertine";
+	src: url('../fonts/LinLibertine_R.woff');
+}
 body {
 	padding-top: 70px;
 	padding-bottom: 70px;
 	background-color: #efefef;
+}
+.pw-container {
+	position: relative;
+	margin: 0px auto;
+	width: auto;
+	overflow: hidden;
+}
+.scroller {
+	margin: 0px;
+	float: left;
+}
+#list-region {
+	width: auto;
+	overflow: auto;
+	margin-left; -10px;
+	margin-right: -10px;
 }
 article {
 	font-family: 'Cardo', 'Times New Roman', serif;
@@ -15,8 +35,10 @@ article p {
 article:first-child {
 	margin-top: 20px;
 }
-.container.about {
+.about {
 	background-color: #fff;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 .about-img {
 	width: 100%;
@@ -28,11 +50,26 @@ article:first-child {
 #mobile-title {
 	padding-left: 0px;
 }
+.nav-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 51px;
+	background-color: #fff;
+	border-bottom: 1px solid #E7E7E7;
+	z-index: 1030;
+}
 nav.navbar {
 	color: #000;
+	left: auto;
+	right: auto;
+	width: 100%;
 	background-color: #fff;
-	font-family: 'Cardo', 'Times New Roman', serif;
+	font-family: 'LinLibertine', 'Times New Roman', serif;
 	font-size: 18px;
+	border-bottom: 0px solid #000;
+
 }
 nav.navbar a.navbar-brand {
 	color: #000;
@@ -50,16 +87,10 @@ nav.navbar .navbar-nav .active>a:hover
 	color: #333;
 }
 
-#list-region {
-	margin-left: 15px;
-}
 
 .book {
 	float: left;
-	width: 252px;
-	height: 385px;
 	overflow: hidden;
-	margin: 0 20px 20px 0;
 	background-color: white;
 }
 .book img{
@@ -89,4 +120,11 @@ nav.navbar .navbar-nav .active>a:hover
 	nav.navbar a.navbar-brand {
 		padding-left: 0;
 	}
+}
+.group:after {
+		visibility: hidden;
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
 }

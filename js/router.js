@@ -10,7 +10,6 @@ route('/', 'list', function(){
 			return "books/books_full_web_" + num + ".json";
 		},
 		template: "book",
-		itemWidth: g.c.ITEM_WIDTH
 	});
 });
 route('/about', 'about', function(){
@@ -23,7 +22,6 @@ route('/table-of-contents', 'list', function(){
 			return "books/books_toc_web_" + num + ".json";
 		},
 		template: "book",
-		itemWidth: g.c.ITEM_WIDTH
 	});
 });
 
@@ -33,7 +31,6 @@ route('/articles', 'list', function(){
 			return "books/books_full_web_" + num + ".json";
 		},
 		template: "book",
-		itemWidth: g.c.ITEM_WIDTH
 	});
 });
 
@@ -45,7 +42,7 @@ function router() {
 	onRoute(url, route.templateName);
 	if (el && route.controller) {
 		el.innerHTML = g.tmpl(route.templateName)();
-		el.setAttribute('class', 'container ' + route.templateName); 
+		el.setAttribute('class', route.templateName); 
 		route.controller();
 	}
 }

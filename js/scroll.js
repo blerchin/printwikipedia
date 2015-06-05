@@ -5,6 +5,7 @@ window.Scroller = (function(){
 		var Scroller = function($container, options){
 			var self = this;
 			$container.empty();
+			this.$container = $container;
 			this.$el = $('<div class="scroller">').appendTo($container);
 			this.options = options;
 			this.scroll_el = options.scroll_el || window;
@@ -12,10 +13,10 @@ window.Scroller = (function(){
 			this.chunk = 0;
 			this.last_chunk = false;
 			this.dataPath = options.dataPath
+			this.item_width = options.item_width || g.c.ITEM_WIDTH;
+			this.item_margin = options.item_margin || g.c.ITEM_MARGIN;
 			this.entry_c = 1;
 			this.entry_i = 0;
-			this.column_c = parseInt($container.width() / options.itemWidth);
-			this.column_i = 0;
 			this.current_row = null;
 			this.fetching = false;
 			this.loader_threshold = 800;
@@ -31,6 +32,7 @@ window.Scroller = (function(){
 			this.updateScheduled = false;
 			this.$loader = $(g.tmpl('spinner')(this)).insertAfter(this.$el);
 			var self = this;
+			$(this.scroll_el).off('scroll'); //reset preexisting handlers
 			$(this.scroll_el).on( 'scroll', function(){
 				if(!self.updateScheduled && self.$el.is(':visible')){
 					setTimeout(function(){
@@ -68,20 +70,6 @@ window.Scroller = (function(){
 				_.each(self.collection, _.bind(self.renderEntry, self));
 			});
 		};
-		//in rows for itemView, which we're no longer using
-		/*
-		Scroller.prototype.renderEntry = function(entry){
-			if( this.column_i++ === 0) {
-				this.current_row = $('<div class="row">');
-			}
-			this.current_row.append( $(g.tmpl(this.options.template)(entry)) );
-			if( this.column_i === this.column_c ){
-				//this.listView.append(this.current_row);
-				this.$el.append(this.current_row);
-				this.column_i = 0;
-			}
-		};
-		*/
 		Scroller.prototype.renderEntry = function(entry){
 			this.$el.append(g.tmpl(this.options.template)(entry));
 		};

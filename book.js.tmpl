@@ -1,8 +1,8 @@
 <div class="book"
 	data-book-name="<%= c.name %>"
-	style="	width: <%= g.c.ITEM_WIDTH %>px; 
-					height: <%= g.c.ITEM_WIDTH * 1.45%>px"
->
+	style="width: <%= g.c.ITEM_WIDTH %>px; height: <%= g.c.ITEM_WIDTH*1.45%>px;
+				margin: 0px <%= g.c.ITEM_MARGIN/2 %>px <%= g.c.ITEM_MARGIN %>px
+								<%= g.c.ITEM_MARGIN/2 %>px;">
 	<a href="<%= g.c.LULU_URL(c.sku) %>" target="_blank">
 		<div class="book-thumb">
 			<% if(g.c.PRELOAD_THUMBS){
