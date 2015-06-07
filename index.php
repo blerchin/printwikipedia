@@ -27,7 +27,7 @@
 			<div class="pw-width navbar-text">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<div id="mobile-title" class="navbar-brand visible-xs">
+					<div id="pw-mob-title" class="navbar-brand visible-xs">
 					Print Wikipedia</div>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
@@ -40,7 +40,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="#/">Print Wikipedia</a></li>
+						<li><a href="#/">Print &#xe02f;ikipedia</a></li>
 						<li><a href="#/table-of-contents">Wikipedia Table of Contents</a></li>
 						<li><a href="#/contributor-appendix">Wikipedia Contributor Appendix</a></li>
 						<li><a href="#/about">About</a></li>
@@ -72,7 +72,7 @@
 		<script>
 			window.g = {};
 			g.c = {
-				LOADER_PATH: "img/spinner.gif",
+				LOADER_PATH: "img/spinner3.gif",
 				IMG_DIR: "img/thumbs",
 				ITEM_WIDTH: 180,
 				ITEM_MARGIN: 20,

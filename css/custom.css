@@ -7,6 +7,9 @@ body {
 	padding-bottom: 70px;
 	background-color: #efefef;
 }
+[data-current-template=about].pw-container.pw-width  {
+	min-width: 320px;
+}
 .pw-container {
 	position: relative;
 	margin: 0px auto;
@@ -45,7 +48,7 @@ article p {
 	width: 100%;
 	height: auto;
 }
-#mobile-title {
+#pw-mob-title {
 	padding-left: 0px;
 }
 nav.navbar {
@@ -95,5 +98,10 @@ nav.navbar .navbar-nav .active>a:hover
 }
 .book .book-data {
 	display: none;
+}
+@media screen and (max-width: 481px) {
+	nav.navbar .pw-width {
+		width: 100% !important;
+	}
 }
 

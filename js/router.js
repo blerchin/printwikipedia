@@ -13,7 +13,6 @@ route('/', 'list', function(){
 	});
 });
 route('/about', 'about', function(){
-	$('#view').addClass('about');
 });
 
 route('/table-of-contents', 'list', function(){
@@ -43,6 +42,7 @@ function router() {
 	if (el && route.controller) {
 		el.innerHTML = g.tmpl(route.templateName)();
 		el.setAttribute('class', route.templateName); 
+		$('.pw-container').attr('data-current-template', route.templateName);
 		route.controller();
 	}
 }
