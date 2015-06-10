@@ -10,9 +10,6 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-		<link
-		href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700'
-		rel='stylesheet' type='text/css'>
     <script src="js/modernizr-2.6.2.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -73,7 +70,7 @@
 			window.g = {};
 			g.c = {
 				LOADER_PATH: "img/spinner3.gif",
-				IMG_DIR: "img/thumbs",
+				IMG_DIR: "https://s3.amazonaws.com/printwikipedia/img/thumbs",
 				ITEM_WIDTH: 180,
 				ITEM_MARGIN: 20,
 				PRELOAD_THUMBS: false,
@@ -94,6 +91,7 @@
 		<script src="js/underscore.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/scroll.js"></script>
+		<script src="js/FontLoader.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
