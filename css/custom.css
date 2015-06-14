@@ -30,7 +30,7 @@ article {
 	font-family: 'LinLibertine', 'Times New Roman', serif;
 	line-height: 28px;
 	font-size: 18px;
-	max-width: 670px;
+	/*max-width: 670px;*/
 }
 article p {
 	margin-bottom: 24px;
@@ -40,9 +40,11 @@ article p {
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 10px;
+	padding-top: 20px;
 }
 .about-img {
 	width: 100%;
+	margin-bottom: 10px;
 }
 .about-img img {
 	width: 100%;

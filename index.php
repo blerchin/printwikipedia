@@ -47,6 +47,10 @@
 		</nav>
 		<div class="pw-container pw-width">
 			<div id="view" >
+				<!-- about text is default, for SEO purposes. -->
+				<div class="hidden">
+					<?php require('about.js.tmpl'); ?>
+				</div>
 			</div>
 		</div> <!-- /.container -->
 
