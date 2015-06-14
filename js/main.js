@@ -3,9 +3,6 @@ $(function(){
 		$('.navbar-collapse').collapse('hide');
 	});
 
-	//switch in special character for Wikipedia.
-	var html = document.documentElement.innerHTML.replace(/(Wikipedia)/g, '&#xe02fikipedia');
-	document.documentElement.innerHTML = html;
 
 	var onResize = function(){
 		var scrollWidth = $(window).width();
@@ -25,3 +22,16 @@ $(function(){
 	});
 	onResize();
 });
+
+var fl = new FontLoader(["LinLibertine"], {
+	"fontLoaded": function(font){
+		console.log("font loaded");
+		//switch in special character for Wikipedia.
+		var nav = $('nav.navbar')[0]
+		var html = nav.innerHTML.replace(/(Wikipedia)/g, '&#xe02fikipedia');
+		nav.innerHTML = html;
+	},
+	"complete": function(){ console.log('completed');}
+}, 3000);
+fl.loadFonts();
+
