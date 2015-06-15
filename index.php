@@ -37,18 +37,22 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
+<?php if($_GET['beta']): ?>
 						<li><a href="#/">Print &#xe02f;ikipedia</a></li>
 						<li><a href="#/table-of-contents">Wikipedia Table of Contents</a></li>
 						<li><a href="#/contributor-appendix">Wikipedia Contributor Appendix</a></li>
 						<li><a href="#/about">About</a></li>
+					<?php else: ?>
+						<li><a href="#/">Print &#xe02f;ikipedia</a></li>
+					<?php endif; ?>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.pw-width -->
 		</nav>
-		<div class="pw-container pw-width">
-			<div id="view" >
+		<div class="pw-container pw-width" data-current-template="about">
+			<div id="view" class="about">
 				<!-- about text is default, for SEO purposes. -->
-				<div class="hidden">
+				<div id="#about-seo" >
 					<?php require('about.js.tmpl'); ?>
 				</div>
 			</div>
@@ -73,6 +77,12 @@
 		<script>
 			window.g = {};
 			g.c = {
+				BETA: <?php 
+if($_GET['beta'])
+	echo 'true';
+else
+	echo 'false'; 
+?>,
 				LOADER_PATH: "img/spinner3.gif",
 				IMG_DIR: "https://s3.amazonaws.com/printwikipedia/img/thumbs",
 				ITEM_WIDTH: 180,

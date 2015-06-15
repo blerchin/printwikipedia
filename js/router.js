@@ -4,34 +4,37 @@ function route (path, templateName, controller) {
 	routes[path] = {templateName: templateName, controller: controller};
 }
 
-route('/', 'list', function(){
-	new Scroller($('#list-region'), {
-		dataPath: function(num){
-			return "books/books_full_web_" + num + ".json";
-		},
-		template: "book",
-	});
-});
 route('/about', 'about', function(){
 });
 
-route('/table-of-contents', 'list', function(){
-	new Scroller($('#list-region'), {
-		dataPath: function(num){
-			return "books/books_toc_web_" + num + ".json";
-		},
-		template: "book",
+if(g.c.BETA){
+	route('/', 'list', function(){
+		new Scroller($('#list-region'), {
+			dataPath: function(num){
+				return "books/books_full_web_" + num + ".json";
+			},
+			template: "book",
+		});
 	});
-});
 
-route('/articles', 'list', function(){
-	new Scroller($('#list-region'), {
-		dataPath: function(num){
-			return "books/books_full_web_" + num + ".json";
-		},
-		template: "book",
+	route('/table-of-contents', 'list', function(){
+		new Scroller($('#list-region'), {
+			dataPath: function(num){
+				return "books/books_toc_web_" + num + ".json";
+			},
+			template: "book",
+		});
 	});
-});
+
+	route('/articles', 'list', function(){
+		new Scroller($('#list-region'), {
+			dataPath: function(num){
+				return "books/books_full_web_" + num + ".json";
+			},
+			template: "book",
+		});
+	});
+}
 
 var el = null;
 function router() {
