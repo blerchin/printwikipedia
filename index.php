@@ -43,8 +43,8 @@
 						<li><a href="#/contributor-appendix">Wikipedia Contributor Appendix</a></li>
 						<li><a href="#/about">About</a></li>
 					<?php else: ?>
-						<li><a href="#/">Print &#xe02f;ikipedia</a></li>
-						<li><a href="#/about">About</a></li>
+						<li><a href="#/print-wikipedia">Print &#xe02f;ikipedia</a></li>
+						<li><a href="#/">About</a></li>
 					<?php endif; ?>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -53,7 +53,7 @@
 		<div class="pw-container pw-width" data-current-template="about">
 			<div id="view" class="about">
 				<!-- about text is default, for SEO purposes. -->
-				<div id="#about-seo" >
+				<div id="#about-seo" class="hidden">
 					<?php require('about.js.tmpl'); ?>
 				</div>
 			</div>

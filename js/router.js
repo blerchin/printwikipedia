@@ -4,9 +4,9 @@ function route (path, templateName, controller) {
 	routes[path] = {templateName: templateName, controller: controller};
 }
 
-route('/about', 'about', function(){
+route('/', 'about', function(){
 });
-route('/', 'list', function(){
+route('/print-wikipedia', 'list', function(){
 	new Scroller($('#list-region'), {
 		dataPath: function(num){
 			return "books/books_web_" + num + ".json";
