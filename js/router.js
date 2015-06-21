@@ -6,16 +6,16 @@ function route (path, templateName, controller) {
 
 route('/about', 'about', function(){
 });
+route('/', 'list', function(){
+	new Scroller($('#list-region'), {
+		dataPath: function(num){
+			return "books/books_web_" + num + ".json";
+		},
+		template: "book",
+	});
+});
 
 if(g.c.BETA){
-	route('/', 'list', function(){
-		new Scroller($('#list-region'), {
-			dataPath: function(num){
-				return "books/books_full_web_" + num + ".json";
-			},
-			template: "book",
-		});
-	});
 
 	route('/table-of-contents', 'list', function(){
 		new Scroller($('#list-region'), {

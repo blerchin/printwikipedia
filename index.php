@@ -44,6 +44,7 @@
 						<li><a href="#/about">About</a></li>
 					<?php else: ?>
 						<li><a href="#/">Print &#xe02f;ikipedia</a></li>
+						<li><a href="#/about">About</a></li>
 					<?php endif; ?>
 					</ul>
 				</div><!-- /.navbar-collapse -->
