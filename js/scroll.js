@@ -77,10 +77,6 @@ window.Scroller = (function(){
 		Scroller.prototype.withNextCollection = function(cb){
 			this.getNextCollection(cb);
 		};
-		Scroller.prototype.getNextEntry = function(){
-			var e = this.collection[this.entry_i++];
-			return e;
-		};
 
 		Scroller.prototype.destroy = function(){
 			this.listView.remove();
