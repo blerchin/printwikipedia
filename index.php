@@ -37,15 +37,10 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-<?php if($_GET['beta']): ?>
 						<li><a href="#/">Print &#xe02f;ikipedia</a></li>
 						<li><a href="#/table-of-contents">Wikipedia Table of Contents</a></li>
-						<li><a href="#/contributor-appendix">Wikipedia Contributor Appendix</a></li>
+						<li><a href="#/appendix">Wikipedia Contributor Appendix</a></li>
 						<li><a href="#/about">About</a></li>
-					<?php else: ?>
-						<li><a href="#/print-wikipedia">Print &#xe02f;ikipedia</a></li>
-						<li><a href="#/">About</a></li>
-					<?php endif; ?>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.pw-width -->
@@ -53,6 +48,7 @@
 		<div class="pw-container pw-width" data-current-template="about">
 			<div id="view" class="about">
 				<!-- about text is default, for SEO purposes. -->
+				<?php require('spinner.js.tmpl'); ?>
 				<div id="#about-seo" class="hidden">
 					<?php require('about.js.tmpl'); ?>
 				</div>
@@ -66,8 +62,12 @@
 		<script type="text/html" id="tmpl-about">
 			<?php require('about.js.tmpl'); ?>
 		</script>
+		<script type="text/html" id="tmpl-credits">
+			<?php require('credits.js.tmpl'); ?>
+		</script>
 		<script type="text/html" id="tmpl-list">
-			<div id="list-region"></div>
+<div id="list-region">
+</div>
 		</script>
 		<script type="text/html" id="tmpl-book">
 			<?php require('book.js.tmpl') ?>
@@ -96,7 +96,9 @@ else
 
 			g.tmpl = function(name){
 				return _.template( 
-					$( '#tmpl-' + name ).html(), 
+					//use data-src in templates so when template is required for SEO
+					//needs, images are not loaded, but they are when used by JS
+					$( '#tmpl-' + name ).html().replace(/data-src=/gi,'src='), 
 					{variable: 'c'}
 				);
 			}

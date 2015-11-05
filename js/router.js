@@ -4,37 +4,37 @@ function route (path, templateName, controller) {
 	routes[path] = {templateName: templateName, controller: controller};
 }
 
-route('/', 'about', function(){
+route('/about', 'about', function(){
 });
-route('/print-wikipedia', 'list', function(){
+route('/credits', 'credits', function(){
+});
+
+route('/', 'list', function(){
 	new Scroller($('#list-region'), {
 		dataPath: function(num){
-			return "books/books_web_" + num + ".json";
+			return "books/printwikipedia_full_web_" + num + ".json";
 		},
 		template: "book",
 	});
 });
 
-if(g.c.BETA){
-
-	route('/table-of-contents', 'list', function(){
-		new Scroller($('#list-region'), {
-			dataPath: function(num){
-				return "books/books_toc_web_" + num + ".json";
-			},
-			template: "book",
-		});
+route('/table-of-contents', 'list', function(){
+	new Scroller($('#list-region'), {
+		dataPath: function(num){
+			return "books/table_of_contents_web_" + num + ".json";
+		},
+		template: "book",
 	});
+});
 
-	route('/articles', 'list', function(){
-		new Scroller($('#list-region'), {
-			dataPath: function(num){
-				return "books/books_full_web_" + num + ".json";
-			},
-			template: "book",
-		});
+route('/appendix', 'list', function(){
+	new Scroller($('#list-region'), {
+		dataPath: function(num){
+			return "books/appendix_web_" + num + ".json";
+		},
+		template: "book",
 	});
-}
+});
 
 var el = null;
 function router() {

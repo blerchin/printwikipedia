@@ -7,7 +7,8 @@ body {
 	padding-bottom: 70px;
 	background-color: #efefef;
 }
-[data-current-template=about].pw-container.pw-width  {
+[data-current-template=about].pw-container.pw-width,
+[data-current-template=credits].pw-container.pw-width  {
 	min-width: 320px;
 }
 .pw-container {
@@ -35,7 +36,8 @@ article {
 article p {
 	margin-bottom: 24px;
 }
-.about {
+.about,
+.credits {
 	background-color: #fff;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -49,6 +51,14 @@ article p {
 .about-img img {
 	width: 100%;
 	height: auto;
+}
+.panel-legal {
+	max-width: 580px;
+}
+.panel-legal p {
+	font-size: 13px;
+	line-height: 18px;
+	margin-bottom: 10px;
 }
 #pw-mob-title {
 	padding-left: 0px;
